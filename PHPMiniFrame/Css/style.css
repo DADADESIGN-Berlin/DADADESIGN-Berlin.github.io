@@ -1,0 +1,135 @@
+/*
+** Setup
+*/
+html {
+	height:100%;
+}
+body {
+	font-size: 18px;
+	overflow-x: hidden;
+	height:100%;
+}
+.h100 {
+    height: 100%;
+    position: relative;
+}
+.img_res{
+	max-width:100%;
+	height: auto;
+}
+.content {
+    margin-bottom: 3em;
+}
+.section {
+    margin-bottom: 1em;
+}
+.header {
+    margin-bottom: 2em;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+a:link, a:hover, a:visited, a:active {
+    color: inherit;
+}
+/*
+** Partials
+*/
+#header {
+    width: 100%;
+    position: relative;
+    padding-top: 80px;
+    height: 50%;
+    background: lightblue;
+	margin-bottom: 4em;
+}
+#header h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#topNav {
+    position: fixed;
+    height: 4em;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    z-index: 1000;
+    background: aliceblue;
+}
+#topNav ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#topNav li {
+    display:inline-block;
+    position: relative;
+    height: 100%;
+    margin-right: 2em;
+}
+#topNav li a {
+    position: relative;
+    height: 100%;
+    display: block;
+    line-height: 360%;
+}
+#navTrigger{
+    display: none;
+    position: fixed;
+    width: 2em;
+    height: 2em;
+    background-image: url(../Resources/Images/open.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+#navTrigger.opened{
+    background-image: url(../Resources/Images/close.svg);
+}
+#mobileNav{
+    display: none;
+    position: fixed;
+    height: 100%;
+    background: #477280;
+    width: 100%;
+    z-index: 500;
+}
+#mobileNav ul {
+    margin-top: 100px;
+}
+#mobileNav li {
+    height: 4em;
+}
+#mobileNav ul li a {
+    font-size: 2em;
+    color: #fff;
+}
+
+#footer{
+	width:100%;
+	background: blue;
+	padding: 5em 0;
+	color: #fff;
+}
+#footer nav ul li a {
+    font-weight: 600;
+}
+/******
+******* Breakpoints
+******/
+        @media only screen and ( max-width: 768px){
+            #navTrigger{
+                display:block;
+            }
+            #topNav{
+                display: none;
+            }
+            #header{
+                padding-top:0;
+            }
+
+        }
